@@ -17,6 +17,9 @@ class CoaxialCable:
     def getImpedance(self):
         impedance=138*np.log10(self.outDiameter/self.innerDiameter)/np.sqrt(self.relativepermittivity)    
         return impedance
-
+    
+    def getCutOffFrequency(self):
+        cutOffFrequency=11.8/(np.sqrt(self.relativepermittivity)*np.pi*((self.innerDiameter+self.outDiameter)/2))
+        return cutOffFrequency
    
   

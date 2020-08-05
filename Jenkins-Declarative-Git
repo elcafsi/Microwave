@@ -6,5 +6,11 @@ pipeline{
                 git 'https://github.com/elcafsi/Microwave'
             }
         }
+        stage("Maven Build"){
+            steps{
+                sh "mvn -version"
+            }
+        }
+        
     }
 }
